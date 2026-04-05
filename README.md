@@ -10,7 +10,7 @@ A Flask web app that puts two locally-running Ollama agents in a philosophical c
 
 - Python 3.10+
 - [Ollama](https://ollama.com) installed and running locally
-- The `gemini4` model pulled in Ollama
+- The `gemma4` model pulled in Ollama
 
 ## Setup
 
@@ -23,7 +23,7 @@ cd existential
 pip install flask requests
 
 # Make sure Ollama is running and the model is available
-ollama pull gemini4   # adjust model name if needed
+ollama pull gemma4   # adjust model name if needed
 
 # Start the app
 python app.py
@@ -35,7 +35,7 @@ Then open **http://localhost:5000** in your browser.
 
 | Variable | Location | Default | Description |
 |----------|----------|---------|-------------|
-| `MODEL`  | `app.py` line 9 | `gemini4` | Ollama model to use |
+| `MODEL`  | `app.py` line 9 | `gemma4` | Ollama model to use |
 | `turns`  | `app.py` in `conversation_generator` | `6` | Number of back-and-forth exchange pairs |
 | `OLLAMA_URL` | `app.py` line 8 | `http://localhost:11434/api/chat` | Ollama API endpoint |
 
